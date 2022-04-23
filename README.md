@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# JellyKnight_Client
-Unity action shooting game
-=======
-# JellyKnight
-//test3
->>>>>>> 6b3f8ff23c34135a2790dc494fcaa00502a3e3c2
+<div>
+  <img src="https://img.shields.io/badge/C#-239120?style=flat-square&logo=Java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Unity-FFFFFF?style=flat-square&logo=Spring Boot&logoColor=white"/>
+</div>
