@@ -227,7 +227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3333060648694495349, guid: 8b59dce9a9df6b5418c3e48e45bb4c2b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.22106
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3333060648694495349, guid: 8b59dce9a9df6b5418c3e48e45bb4c2b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -257,9 +257,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4742587787938202836, guid: 8b59dce9a9df6b5418c3e48e45bb4c2b, type: 3}
+      propertyPath: inputManager
+      value: 
+      objectReference: {fileID: 4796679692511636427, guid: 15cf5cf628022f6419d8990a3e7772b4, type: 3}
     - target: {fileID: 7452889499692581950, guid: 8b59dce9a9df6b5418c3e48e45bb4c2b, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452889499692581950, guid: 8b59dce9a9df6b5418c3e48e45bb4c2b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b59dce9a9df6b5418c3e48e45bb4c2b, type: 3}
