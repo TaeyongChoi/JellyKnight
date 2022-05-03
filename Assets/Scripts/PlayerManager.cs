@@ -4,20 +4,33 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public const string PlayerGameObjectName = "Player";
+
+    [SerializeField]
+    private Vector3 startPostion = Vector3.zero;
+
+    private GameObject player = null;
+
+    public int playerSpeed = 5;
+
+    private PlayerManager() { }
+
+    public void CreatePlayer()
     {
-        
+        if (player != null) return;
+
+        player = ResourceUtils.MakePrefabInstance(PlayerGameObjectName);
+        player.transform.position = startPostion;
+        player.name = PlayerGameObjectName;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveHorizontal(float value)
     {
-        
+        player.transform.Translate(new Vector3(value * playerSpeed * Time.deltaTime, 0, 0));
     }
 
-    public void Speak()
+    public void MoveVertical(float value)
     {
-        print("ah~~~");
+        player.transform.Translate(new Vector3(0, value * playerSpeed * Time.deltaTime, 0));
     }
 }
