@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public InputManager inputManager;
     public PlayerManager playerManager;
+    public UIManager uiManager;
 
     private GameManager() { }
 
@@ -29,10 +30,28 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerManager.CreatePlayer();
+        initPlayerManager();
+        initInputManager();
+        initUIManager();
+    }
 
+    private void initPlayerManager()
+    {
+        playerManager.CreatePlayer();
+    }
+
+    private void initInputManager()
+    {
         inputManager.AddHorizontalInputDelegate(playerManager.MoveHorizontal);
         inputManager.AddVerticalInputDelegate(playerManager.MoveVertical);
+    }
+
+    private void initUIManager()
+    {
+        uiManager.TogglePlayerStatusUI();
+        uiManager.updateHpBarText(playerManager.playerCurrentHP + "/" + PlayerManager.playerMaxHP);
+        uiManager.updateShieldBarText(playerManager.playerCurrentShield + "/" + PlayerManager.playerMaxShield);
+        uiManager.updateMpBarText(playerManager.playerCurrentMP + "/" + PlayerManager.playerMaxMP);
     }
 
     // Update is called once per frame

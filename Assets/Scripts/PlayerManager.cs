@@ -11,6 +11,14 @@ public class PlayerManager : MonoBehaviour
 
     private GameObject player = null;
 
+    public const int playerMaxHP = 100;
+    public const int playerMaxShield = 100;
+    public const int playerMaxMP = 100;
+
+    public int playerCurrentHP = 100;
+    public int playerCurrentShield = 100;
+    public int playerCurrentMP = 100;
+
     public int playerSpeed = 5;
 
     private PlayerManager() { }
