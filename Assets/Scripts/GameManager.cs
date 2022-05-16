@@ -49,9 +49,12 @@ public class GameManager : MonoBehaviour
     private void initUIManager()
     {
         uiManager.TogglePlayerStatusUI();
-        uiManager.updateHpBarText(playerManager.playerCurrentHP + "/" + PlayerManager.playerMaxHP);
-        uiManager.updateShieldBarText(playerManager.playerCurrentShield + "/" + PlayerManager.playerMaxShield);
-        uiManager.updateMpBarText(playerManager.playerCurrentMP + "/" + PlayerManager.playerMaxMP);
+        uiManager.updateHpBarText(playerManager.playerCurrentHP, PlayerManager.playerMaxHP);
+        uiManager.updateShieldBarText(playerManager.playerCurrentShield, PlayerManager.playerMaxShield);
+        uiManager.updateMpBarText(playerManager.playerCurrentMP, PlayerManager.playerMaxMP);
+
+        uiManager.ToggleGoldUI();
+        uiManager.updateGoldText(playerManager.goldCount);
     }
 
     // Update is called once per frame

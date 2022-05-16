@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
     public const string PlayerGameObjectName = "Player";
 
     [SerializeField]
-    private Vector3 startPostion = Vector3.zero;
+    private Vector3 startPostion = new Vector3(0, 0, 100f);
 
     private GameObject player = null;
 
@@ -21,6 +21,8 @@ public class PlayerManager : MonoBehaviour
 
     public int playerSpeed = 5;
 
+    public int goldCount = 0;
+
     private PlayerManager() { }
 
     public void CreatePlayer()
@@ -28,7 +30,7 @@ public class PlayerManager : MonoBehaviour
         if (player != null) return;
 
         player = ResourceUtils.MakePrefabInstance(PlayerGameObjectName);
-        player.transform.position = startPostion;
+        player.transform.SetPositionAndRotation(startPostion, Quaternion.identity);
         player.name = PlayerGameObjectName;
     }
 
