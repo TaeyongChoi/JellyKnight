@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     public GameObject goldUI;
     private GameObject gold;
 
+    public GameObject joystickUI;
+
     private void Awake()
     { 
         initPlayerStatusUI();
@@ -51,6 +53,18 @@ public class UIManager : MonoBehaviour
         else
         {
             goldUI.SetActive(true);
+        }
+    }
+
+    public void ToggleJoystickUI()
+    {
+        if (joystickUI.activeSelf)
+        {
+            joystickUI.SetActive(false);
+        }
+        else
+        {
+            joystickUI.SetActive(true);
         }
     }
 

@@ -5,6 +5,8 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
 
+    public VariableJoystick joystick;
+
     private event Delegates.InputDelegate HorizontalInputDelegate;
     private event Delegates.InputDelegate VerticalInputDelegate;
 
@@ -26,7 +28,7 @@ public class InputManager : MonoBehaviour
 
     private void GetHorizontalInput()
     {
-        float horizontalValue = Input.GetAxis("Horizontal");
+        float horizontalValue = joystick.Horizontal;
         if (horizontalValue != 0f)
         {
             HorizontalInputDelegate(horizontalValue);
@@ -35,7 +37,7 @@ public class InputManager : MonoBehaviour
 
     private void GetVerticalInput()
     {
-        float verticalValue = Input.GetAxis("Vertical");
+        float verticalValue = joystick.Vertical;
         if (verticalValue != 0f)
         {
             VerticalInputDelegate(verticalValue);
