@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098d0fa9942c6d84eb27d6c62add64c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPostion: {x: 0, y: 0, z: 100}
+  startPostion: {x: 0, y: 0, z: 101}
   playerCurrentHP: 100
   playerCurrentShield: 100
   playerCurrentMP: 100

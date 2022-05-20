@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
 
-        MakeManagerGameObject<InputManager>();
         MakeManagerGameObject<PlayerManager>();
     }
 
@@ -55,6 +54,8 @@ public class GameManager : MonoBehaviour
 
         uiManager.ToggleGoldUI();
         uiManager.updateGoldText(playerManager.goldCount);
+
+        uiManager.ToggleJoystickUI();
     }
 
     // Update is called once per frame
